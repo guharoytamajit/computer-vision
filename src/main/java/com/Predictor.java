@@ -57,7 +57,7 @@ public class Predictor {
     public static void ImageClassification_Sample(CustomVisionTrainingClient trainClient, CustomVisionPredictionClient predictor) {
         try {
                      // load test image
-            byte[] testImage = GetImage("/Test", "test_image2.jpeg");
+            byte[] testImage = GetImage("/Test", "flower.jpg");
 
             // predict
             UUID id=UUID.fromString("e9ac1abf-2a9e-4079-85b7-e028781284e0");
@@ -65,7 +65,7 @@ public class Predictor {
                 .withProjectId(id);
             
 			ImagePrediction results = withProjectId
-                .withPublishedName("Iteration1")
+                .withPublishedName("Iteration2")
                 .withImageData(testImage)
                 .execute();
 

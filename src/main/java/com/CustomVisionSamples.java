@@ -67,7 +67,7 @@ public class CustomVisionSamples {
 
             // <snippet_tags>
             // create hemlock tag
-            UUID id = UUID.fromString("e9ac1abf-2a9e-4079-85b7-e028781284e0");//project.id();
+            UUID id = project.id();
 			Tag hemlockTag = trainer.createTag()
                 .withProjectId(id)
                 .withName("Hemlock")
